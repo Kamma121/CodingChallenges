@@ -1,3 +1,4 @@
+// https://codeforces.com/problemset/problem/4/A
 function calcWatermelon(watermelonWeight) {
     let wrong = "NO";
     let correct = "YES";
