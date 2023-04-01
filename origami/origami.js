@@ -1,18 +1,17 @@
 // https://codeforces.com/problemset/problem/1080/A
 
-const red = 2;
-const green = 5;
-const blue = 8;
-
 function calculateNotebooks(n, k) {
     if (n < 1) {
         return "Wrong value of friends";
     }
-    if (k > 10 ** 8) {
+    if (k > Math.pow(10, 8)) {
         return "Wrong value of sheets in notebook";
     }
+    let red = 2;
+    let green = 5;
+    let blue = 8;
     let result = 0;
-    let colors = [red, green, blue];
+    const colors = [red, green, blue];
     for (let i = 0; i < colors.length; i++) {
         result += calcSheets(n, k, colors[i]);
     }
