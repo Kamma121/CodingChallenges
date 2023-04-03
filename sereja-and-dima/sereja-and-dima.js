@@ -10,31 +10,30 @@ function calculateSum(n, cards) {
     while (moveCount < n) {
         switch (moveCount % 2) {
             case 0 :
-                if (cards[0] >= cards[cards.length - 1]) {
-                    serejaSum += cards[0];
-                    cards.splice(0, 1);
-                } else {
-                    serejaSum += cards[cards.length - 1];
-                    cards.splice(cards.length - 1, 1);
-                }
+                serejaSum += calculateBefore();
                 moveCount++;
                 break;
             case 1 :
-                if (cards[0] >= cards[cards.length - 1]) {
-                    dimaSum += cards[0];
-                    cards.splice(0, 1);
-                } else {
-                    dimaSum += cards[cards.length - 1];
-                    cards.splice(cards.length - 1, 1);
-                }
+                dimaSum += calculateBefore();
                 moveCount++;
                 break;
             default :
                 break;
         }
-
     }
     return `${serejaSum} ${dimaSum}`;
+}
+
+function calculateBefore() {
+    let sum = 0;
+    if (cards[0] >= cards[cards.length - 1]) {
+        sum += cards[0];
+        cards.splice(0, 1);
+    } else {
+        sum += cards[cards.length - 1];
+        cards.splice(cards.length - 1, 1);
+    }
+    return sum;
 }
 
 const cards = [1, 2, 3, 4, 5, 6, 7];
