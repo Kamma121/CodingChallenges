@@ -1,9 +1,7 @@
 // https://leetcode.com/problems/wildcard-matching/description/
 
 function isMatch(s, p) {
-    if (p === "*") {
-        return true;
-    } else if (s === p) {
+    if (p === "*" || s === p) {
         return true;
     } else if (p.includes("?")) {
         let id = p.indexOf("?");
@@ -22,10 +20,8 @@ function isMatch(s, p) {
                 return true;
             }
         }
-
     }
     return false;
-
 }
 
 isMatch("bcaaa", "bl?aa");
