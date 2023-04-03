@@ -7,25 +7,15 @@ function calculateNotebooks(n, k) {
     if (k > Math.pow(10, 8)) {
         return "Wrong value of sheets in notebook";
     }
-    let red = 2;
-    let green = 5;
-    let blue = 8;
-    let result = 0;
+    let red = 2 * n;
+    let green = 5 * n;
+    let blue = 8 * n;
     const colors = [red, green, blue];
-    for (let i = 0; i < colors.length; i++) {
-        result += calcSheets(n, k, colors[i]);
+    let sheets = 0;
+    for (let color of colors) {
+        sheets += Math.ceil(color / k);
     }
-    return result;
+    return sheets;
 }
 
-function calcSheets(n, k, color) {
-    let neededSheets = color * n;
-    let counter = 0;
-    while (neededSheets > 0) {
-        neededSheets -= k;
-        counter++;
-    }
-    return counter;
-}
-
-calculateNotebooks(3, 5);
+calculateNotebooks(15, 6);
