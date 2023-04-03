@@ -22,7 +22,6 @@ function reverse(head, left, right) {
     for (let element of lastRight) {
         newHead.splice(newHead.length, 0, element);
     }
-
     return newHead;
 }
 
