@@ -9,4 +9,6 @@ function checkLength(s) {
         }
     }
     return currentWord.length;
-};
+}
+
+module.exports = checkLength;

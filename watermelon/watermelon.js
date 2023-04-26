@@ -2,13 +2,11 @@
 function calcWatermelon(watermelonWeight) {
     let wrong = "NO";
     let correct = "YES";
-    if (watermelonWeight < 1 || watermelonWeight > 100) {
+    if (watermelonWeight <= 2) {
         return wrong;
     }
-    if ((watermelonWeight / 2) % 2 === 0 || watermelonWeight % 2 === 0) {
-        return correct;
-    }
-    return wrong;
+    return watermelonWeight % 2 === 0 ? correct : wrong;
 }
 
 calcWatermelon(150);
+module.exports = calcWatermelon;

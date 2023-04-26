@@ -6,4 +6,5 @@ function calcRunningSum(nums) {
         runningSum[i] = nums[i] + runningSum[i - 1];
     }
     return runningSum;
-};
+}
+module.exports = calcRunningSum;

@@ -10,3 +10,4 @@ function removeStars(s) {
     }
     return s;
 }
+module.exports = removeStars;

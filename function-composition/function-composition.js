@@ -8,3 +8,5 @@ function compose(functions) {
         return x;
     }
 }
+
+module.exports = compose;

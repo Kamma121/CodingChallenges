@@ -25,3 +25,4 @@ function isMatch(s, p) {
 }
 
 isMatch("bcaaa", "bl?aa");
+module.exports = isMatch;

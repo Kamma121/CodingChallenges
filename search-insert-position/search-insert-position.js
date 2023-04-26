@@ -14,5 +14,6 @@ function search(nums, target) {
             return j;
         }
     }
-};
+}
 search([1, 3, 6], 2);
+module.exports = search;
