@@ -12,3 +12,4 @@ function kidsWithCandies(candies, extraCandies) {
     }
     return result;
 }
+module.exports = kidsWithCandies;

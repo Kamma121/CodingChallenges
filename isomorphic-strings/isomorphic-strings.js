@@ -15,4 +15,5 @@ function isIsomorphic(s, t) {
         return true;
     }
     return false;
-};
+}
+module.exports = isIsomorphic;

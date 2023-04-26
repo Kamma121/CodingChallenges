@@ -19,3 +19,4 @@ function calculateNotebooks(n, k) {
 }
 
 calculateNotebooks(15, 6);
+module.exports = calculateNotebooks;
