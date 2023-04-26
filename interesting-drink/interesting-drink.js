@@ -36,3 +36,5 @@ function calculateShops(n, prices, days, coins) {
 const prices = [3, 10, 8, 6, 11];
 const coinsNumber = [1, 10, 3, 11];
 calculateShops(5, prices, 4, coinsNumber);
+
+module.exports = calculateShops;

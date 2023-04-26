@@ -15,3 +15,5 @@ function findPivotIndex(nums) {
     }
     return -1;
 }
+
+module.exports = findPivotIndex;

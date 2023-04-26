@@ -10,11 +10,11 @@ function calculateSum(n, cards) {
     while (moveCount < n) {
         switch (moveCount % 2) {
             case 0 :
-                serejaSum += calculateBefore();
+                serejaSum += calculateBefore(cards);
                 moveCount++;
                 break;
             case 1 :
-                dimaSum += calculateBefore();
+                dimaSum += calculateBefore(cards);
                 moveCount++;
                 break;
             default :
@@ -24,7 +24,7 @@ function calculateSum(n, cards) {
     return `${serejaSum} ${dimaSum}`;
 }
 
-function calculateBefore() {
+function calculateBefore(cards) {
     let sum = 0;
     if (cards[0] >= cards[cards.length - 1]) {
         sum += cards[0];
@@ -38,3 +38,4 @@ function calculateBefore() {
 
 const cards = [1, 2, 3, 4, 5, 6, 7];
 calculateSum(7, cards);
+module.exports = calculateSum;
