@@ -1,28 +1,28 @@
 // https://leetcode.com/problems/fruit-into-baskets/
 
 function totalFruit(fruits) {
-    const myMap = new Map();
+    const treeMap = new Map();
     let counter = 0;
     let maxCounter = 0;
     let left = 0;
     for (let i = 0; i < fruits.length; i++) {
-        if (myMap.has(fruits[i])) {
-            let treeCount = myMap.get(fruits[i]);
-            myMap.set(fruits[i], ++treeCount);
+        if (treeMap.has(fruits[i])) {
+            let treeCount = treeMap.get(fruits[i]);
+            treeMap.set(fruits[i], ++treeCount);
             counter++;
         } else {
-            myMap.set(fruits[i], 1);
+            treeMap.set(fruits[i], 1);
             counter++;
         }
-        while (myMap.size > 2) {
+        while (treeMap.size > 2) {
             counter--;
             if (counter > maxCounter) {
                 maxCounter = counter;
             }
-            let tmp = myMap.get(fruits[left]);
-            myMap.set(fruits[left], --tmp);
-            if (myMap.get(fruits[left]) === 0) {
-                myMap.delete(fruits[left]);
+            let treeCount = treeMap.get(fruits[left]);
+            treeMap.set(fruits[left], --treeCount);
+            if (treeMap.get(fruits[left]) === 0) {
+                treeMap.delete(fruits[left]);
             }
             left++;
         }
