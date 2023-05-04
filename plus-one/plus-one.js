@@ -1,15 +1,16 @@
 // https://leetcode.com/problems/plus-one/description/
 
 function plusOne(digits) {
-    let len = digits.length - 1;
-    while (digits[len] === 9) {
-        digits[len--] = 0;
-        if (len === -1) {
+    let digitsLength = digits.length - 1;
+    while (digits[digitsLength] === 9) {
+        digits[digitsLength--] = 0;
+        if (digitsLength === -1) {
             digits.unshift(1);
             return digits;
         }
     }
-    digits[len]++;
+    digits[digitsLength]++;
     return digits;
 }
+
 module.exports = plusOne;
